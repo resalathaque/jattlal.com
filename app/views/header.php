@@ -7,6 +7,10 @@
     <?php if(!empty($description)): ?>
         <meta name="description" content="<?php echo $description ?>">
     <?php endif ?>
+
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/" />
+    <link rel="dns-prefetch" href="https://files.jattlal.com/" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="has-background-dark">
