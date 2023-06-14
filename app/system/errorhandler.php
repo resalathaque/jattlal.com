@@ -1,6 +1,6 @@
 <?php
 
-class Error {
+class Errorhandler {
 	
 	/**
 	 * Exception handler
@@ -9,9 +9,6 @@ class Error {
 	 */
 	public static function exception($e)
 	{
-		// set error header
-		header('HTTP/1.0 500 Internal Server Error');
-
 		if (Config::app('debug'))
 		{
 			echo "<html><h2>Unhandled Exception</h2>

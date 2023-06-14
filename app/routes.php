@@ -6,13 +6,12 @@
 |--------------------------------------------------------------------------
 */
 
-route::get('/test', function() {
-	return db::find('companies', 'U74210AS2012PTC011339');
-});
+route::get('/', 'MusicController::index');
+route::get('/(:name)', 'MusicController::byCategory');
+route::get('/(:name)/(:name)', 'MusicController::albumDetail');
 
-
-route::get('/', 'HomeController::getHome');
-route::get('/company/(:any)', 'CompanyController::getByCompanyID');
+route::get('/company/', 'CompanyController::home');
+route::get('/company/(:any)', 'CompanyController::detail');
 
 
 ?>

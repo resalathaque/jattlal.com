@@ -8,11 +8,11 @@ return array(
 	|--------------------------------------------------------------------------
 	*/
 
-	'dns' => 'mysql:host=localhost;dbname=allcompany',
+	'dns' => 'mysql:host=localhost;dbname=jattlal',
 	
-	'username' => 'webroot',
+	'username' => 'root',
 	
-	'password' => 'Ranvir001',
+	'password' => '',
 
 );
 

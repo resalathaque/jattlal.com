@@ -1,32 +1,39 @@
 <?php include('header.php') ?>
-<main class="column is-9">
 
-	<?php foreach ($companies as $company): ?>
-		<article class="media">
-			<figure class="media-left">
-				<p class="image is-64x64">
-					<img src="/industrialicondarkblue.png">
-				</p>
-			</figure>
-			<div class="media-content">
-				<div class="content">
-					<p>
-						<strong><?php echo "<a href=\"/company/{$company['id']}\">{$company['name']}</a>" ?></strong>
-						<br>
-						<small>Registed at <?php echo timeago(strtotime($company['reg_date'])) ?> ago</small>
-						<br>
+<main class="container is-fullhd my-3 px-2">
 
-						<?php printf("%s is a %s incorporated that has been registered on %s in %s, India. The Corporate Identity Number of this company is %s.",
-							str::title($company['name']), $company['class'], date("d F Y", strtotime($company['reg_date'])), $company['state'], $company['id']) ?>
-					</p>
-				</div>
-			</div>
-		</article>
-	<?php endforeach ?>
+    <section id="bollywood">
+        <div class="box has-background-danger py-2">
+            <div class="is-size-6 has-text-white">
+                <span >Bollywood Music</span>
+                <a href="/bollywood" title="Browse all Bollywood music" class="is-pulled-right has-text-warning">Browse All &#8594;</a>
+            </div>
+        </div>
 
+        <div class="columns is-multiline is-mobile">
+            <?php foreach($objects as $object): ?>
+                
+                <div class="column is-one-fifth-desktop is-half-mobile is-one-third-tablet">
+                    <a href="<?php echo "{$object['music_category_slug']}/{$object['music_album_slug']}" ?>" title="<?php echo $object['music_album_name'] ?>">
+                        <div class="card has-background-black">
+                            <div class="card-image">
+                                <figure class="image is-square">
+                                    <img loading="lazy" src="<?php echo "//files.jattlal.com/{$object['music_album_poster']}" ?>" alt="<?php echo $object['music_album_name'] ?>">
+                                </figure>
+                            </div>
+
+                            <div class="card-content py-2">
+                                <div class="content">
+                                    <?php echo $object['music_album_name'] ?>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach ?>
+        </div>
+    </section>
 </main>
 
-<aside class="column">
 
-</aside>
 <?php include('footer.php') ?>

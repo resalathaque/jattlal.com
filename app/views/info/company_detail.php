@@ -1,4 +1,4 @@
-<?php include('header.php') ?>
+<?php include(app_path .'views/info/header.php') ?>
 <main class="column is-8">
 
 	<div class="main-padd">
@@ -96,4 +96,5 @@
 	<?php endforeach ?>
 	</ul>
 </aside>
-<?php include('footer.php') ?>
+
+<?php include(app_path .'views/info/footer.php') ?>
