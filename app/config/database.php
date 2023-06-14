@@ -10,9 +10,9 @@ return array(
 
 	'dns' => 'mysql:host=localhost;dbname=jattlal',
 	
-	'username' => 'root',
+	'username' => 'webroot',
 	
-	'password' => '',
+	'password' => 'Ranvir001',
 
 );
 
